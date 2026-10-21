@@ -1,0 +1,87 @@
+/* กำหนดสีหลักและฟอนต์ */
+:root {
+    --primary-color: #4CAF50;
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --card-bg: #fff;
+}
+
+/* คลาสสำหรับโหมดมืด */
+.dark-mode {
+    --bg-color: #222;
+    --text-color: #f4f4f9;
+    --card-bg: #333;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: 0.3s; /* ทำให้สลับสีนุ่มนวลขึ้น */
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Flexbox สำหรับเรียงการ์ดทักษะ */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 150px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Media Query สำหรับจอมือถือ (กว้างไม่เกิน 600px) ให้เรียงแนวตั้ง */
+@media (max-width: 600px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-card {
+        width: 80%;
+    }
+}
